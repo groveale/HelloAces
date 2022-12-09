@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "HelloAces",
+    "componentType": "adaptiveCardExtension",
+    "aceTemplateType": "Basic",
+    "componentName": "HelloGraph",
+    "plusBeta": false,
+    "isCreatingSolution": false,
+    "version": "1.15.2",
+    "libraryName": "hello-aces",
+    "libraryId": "32b126aa-cd68-4c9c-a637-89e5fdfd47ae",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "HelloAces description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}

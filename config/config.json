@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "hello-anon-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/helloAnon/HelloAnonAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/helloAnon/HelloAnonAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    },
+    "hello-enterprise-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/helloEnterprise/HelloEnterpriseAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/helloEnterprise/HelloEnterpriseAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    },
+    "hello-graph-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/helloGraph/HelloGraphAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/helloGraph/HelloGraphAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "HelloAnonAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/helloAnon/loc/{locale}.js",
+    "HelloEnterpriseAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/helloEnterprise/loc/{locale}.js",
+    "HelloGraphAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/helloGraph/loc/{locale}.js"
+  }
+}

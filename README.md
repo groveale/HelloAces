@@ -2,7 +2,7 @@
 
 Three cards
 
-![version](https://img.shields.io/badge/version-1.13-green.svg)
+![version](https://github.com/groveale/HelloAces/blob/master/res/cardviews.png)
 
 ## Summary
 

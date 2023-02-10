@@ -25,7 +25,7 @@ export class CardView extends BaseBasicCardView<IHelloEnterpriseAdaptiveCardExte
 
   public get data(): IBasicCardParameters {
     return {
-      primaryText: strings.PrimaryText,
+      primaryText: `£${this.state.daily} Today 💸`,
       title: this.properties.title
     };
   }

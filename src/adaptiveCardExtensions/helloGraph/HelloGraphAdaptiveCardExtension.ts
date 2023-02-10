@@ -9,6 +9,7 @@ export interface IHelloGraphAdaptiveCardExtensionProps {
 }
 
 export interface IHelloGraphAdaptiveCardExtensionState {
+  name?: string;
 }
 
 const CARD_VIEW_REGISTRY_ID: string = 'HelloGraph_CARD_VIEW';
@@ -26,7 +27,7 @@ export default class HelloGraphAdaptiveCardExtension extends BaseAdaptiveCardExt
     this.cardNavigator.register(CARD_VIEW_REGISTRY_ID, () => new CardView());
     this.quickViewNavigator.register(QUICK_VIEW_REGISTRY_ID, () => new QuickView());
 
-    return Promise.resolve();
+    return this._fetchData();
   }
 
   protected loadPropertyPaneResources(): Promise<void> {
@@ -47,5 +48,16 @@ export default class HelloGraphAdaptiveCardExtension extends BaseAdaptiveCardExt
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return this._deferredPropertyPane?.getPropertyPaneConfiguration();
+  }
+
+  private _fetchData(): Promise<void> {
+    return this.context.msGraphClientFactory
+      .getClient("3")
+      .then(client => client.api('me').get())
+      .then((user) => {
+        this.setState({
+          name: user.displayName
+        });
+      });
   }
 }

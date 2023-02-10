@@ -32,6 +32,12 @@
         "id": "77f45e75-814b-4095-8104-ce03135981b2",
         "version": "1.0.0.0"
       }
+    ],
+    "webApiPermissionRequests": [
+      {
+        "resource": "ag-viva-connections-sqlapi",
+        "scope": "user_impersonation"
+      }
     ]
   },
   "paths": {

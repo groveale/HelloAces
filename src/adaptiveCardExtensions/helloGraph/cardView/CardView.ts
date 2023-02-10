@@ -25,7 +25,7 @@ export class CardView extends BaseBasicCardView<IHelloGraphAdaptiveCardExtension
 
   public get data(): IBasicCardParameters {
     return {
-      primaryText: strings.PrimaryText,
+      primaryText: `Hello ${this.state.name || 'there'}`,
       title: this.properties.title
     };
   }
